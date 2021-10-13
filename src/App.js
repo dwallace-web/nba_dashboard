@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Header from "./components/Header";
 
 function App() {
+  const [nba, setNBA] = useState('');
+
+  const fetchNBA = () => {
+    let url = `http://lakers-backend.herokuapp.com/leaguedetails`
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => setNBA(data))
+      .catch(error => console.log(error))
+  };
+  fetchNBA()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      {/* <Header /> */}
     </div>
   );
 }
