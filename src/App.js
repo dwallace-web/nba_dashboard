@@ -1,22 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 
 function App() {
-  const [nba, setNBA] = useState('');
 
-  const fetchNBA = () => {
-    let url = `http://lakers-backend.herokuapp.com/leaguedetails`
+  const [games, setGames] = useState([])
+  // const [teams, setTeams] = useState([])
 
-    fetch(url)
-      .then(res => res.json())
-      .then(data => setNBA(data))
-      .catch(error => console.log(error))
-  };
-  fetchNBA()
+  //game handling
+  useEffect(() => {
+    const getGames = async () => {
+      const remoteGames = await fetchGames()
+      setGames(remoteGames)
+    }
+    getGames()
+  }, [])
+  const fetchGames = async () => {
+    const res = await fetch('http://lakers-backend.herokuapp.com/leaguenextevents')
+    const data = await res.json()
+    console.log(data)
+    return data.events
+  }
+
+  // //team handling
+  // useEffect(() => {
+  //   const getTeams = async () => {
+  //     const remoteTeams = await fetchTeams()
+  //     setTeams(remoteTeams)
+  //   }
+  //   getTeams()
+  // }, [])
+
+  // const fetchTeams = async () => {
+  //   const res = await fetch('http://lakers-backend.herokuapp.com/leaguedetails')
+  //   const data = await res.json()
+  //   console.log(data)
+  //   // return data.events
+  // }
 
   return (
     <div className="App" >
-      {/* <Header /> */}
+      <Header games={games} />
     </div>
   );
 }
