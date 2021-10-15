@@ -1,11 +1,25 @@
 import React from 'react'
+// import PropTypes from 'prop-types'
 
-const Header = () => {
+const Header = props => {
+
+
     return (
-        <Header>
+        <div>
+            {
+                props.teams.map((team) =>
+                    <div key={team.idTeam}>
+                        <img src={team.strTeamBadge} alt={team.strTeam} />
+                    </div>
 
-        </Header>
+                )
+            }
+        </div>
     )
 }
+
+// Header.propTypes = {
+
+// }
 
 export default Header
