@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Header from './components/Header'
 import LeagueGames from './components/League/LeagueGames'
+import LeagueTeams from './components/League/LeagueTeams';
 
 function App() {
 
@@ -41,8 +41,20 @@ function App() {
 
   return (
     <div className="App" >
-      <LeagueGames games={games} />
-      <Header teams={teams} />
+      <div className="container">
+        <div className="header">
+        </div>
+        <div className="body">
+          <div className="games-display">
+            <LeagueGames games={games} />
+          </div>
+          <div className="teams-display">
+            <LeagueTeams teams={teams} />
+          </div>
+        </div>
+        <div className="footer">
+        </div>
+      </div>
     </div>
   );
 }

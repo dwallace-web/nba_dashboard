@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  border: 1px black solid;
+  /* padding: 2px; */
+}
+.container {
+  display: grid
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.game-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.team-display {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-auto-flow: row;
+}
+.team-view {
+  display: block;
+  align-items: center;
+}
+.team-links li {
+  display: inline;
+}
+.team-badge{
+  max-width: 40px;
 }
