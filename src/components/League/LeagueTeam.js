@@ -13,7 +13,6 @@ const LeagueTeam = ({ team }) => {
             <div className="team-view">
                 <img src={team.strTeamBadge} alt={team.strTeam} className="team-badge team-element" />
                 <h3 className="team-name team-element">{team.strTeam}</h3>
-                {/* <h4 className="team-info-location">{team.strStadiumLocation}</h4> */}
                 <h4 className="team-info-founded team-element">Est. {team.intFormedYear} </h4>
                 <ul className="team-links team-element">
                     <li className="team-icons team-element"><a target="_blank" rel="noreferrer" href={`https://${team.strFacebook}`}><SiFacebook /></a></li>

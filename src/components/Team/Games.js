@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 
 const Games = props => {
     return (
@@ -7,10 +7,6 @@ const Games = props => {
 
         </div>
     )
-}
-
-Games.propTypes = {
-
 }
 
 export default Games
