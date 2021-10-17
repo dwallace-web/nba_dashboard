@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
-import LeagueGames from './components/League/LeagueGames'
 import LeagueTeams from './components/League/LeagueTeams';
+import LeagueGames from './components/League/LeagueGames';
+import Header from './components/Body/Header';
+import Footer from './components/Body/Footer';
+import NavBar from './components/Body/Navbar';
 
 function App() {
 
@@ -40,9 +43,13 @@ function App() {
   }
 
   return (
-    <div className="App" >
+    <div className="App">
       <div className="container">
         <div className="header">
+          <Header />
+        </div>
+        <div className="navbar">
+          <NavBar />
         </div>
         <div className="body">
           <div className="games-display">
@@ -53,6 +60,7 @@ function App() {
           </div>
         </div>
         <div className="footer">
+          <Footer />
         </div>
       </div>
     </div>

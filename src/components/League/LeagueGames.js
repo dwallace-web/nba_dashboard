@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import LeagueGame from './LeagueGame'
 
 const LeagueGames = props => {
@@ -10,14 +9,9 @@ const LeagueGames = props => {
                 props.games.map((game) =>
                     <LeagueGame key={game.idEvent} game={game} />
                 )
-
             }
         </div>
     )
-}
-
-LeagueGames.propTypes = {
-
 }
 
 export default LeagueGames
