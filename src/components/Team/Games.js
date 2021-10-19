@@ -1,9 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import TeamGame from './TeamGame';
 
 const Games = props => {
 
-    const [NextGames, setNextGames] = useState([])
+    const [nextGames, setNextGames] = useState([])
 
     useEffect(() => {
         const getNextGames = async () => {
@@ -17,12 +18,16 @@ const Games = props => {
         const res = await fetch(`http://lakers-backend.herokuapp.com/eventsnext/${props.teamID}`)
         const data = await res.json()
         console.log(data)
-        // return data.player
+        return data.events
     }
 
     return (
         <div>
-            <h4>Games</h4>
+            {
+                nextGames.map((game) =>
+                    <TeamGame game={game} key={game.idEvent} />
+                )
+            }
         </div>
     )
 }
