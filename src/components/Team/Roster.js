@@ -1,12 +1,11 @@
 import React from 'react'
 
-
-const Games = props => {
+const Roster = () => {
     return (
         <div>
-            <h4>Games</h4>
+            <h4>Roster</h4>
         </div>
     )
 }
 
-export default Games
+export default Roster
