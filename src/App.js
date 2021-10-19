@@ -1,14 +1,8 @@
 import { useState, useEffect } from "react";
-import LeagueTeams from './components/League/LeagueTeams';
-import LeagueGames from './components/League/LeagueGames';
 import Header from './components/Body/Header';
 import Footer from './components/Body/Footer';
 import NavBar from './components/Body/Navbar';
-import {
-  Switch,
-  Route,
-} from 'react-router-dom'
-import Team from "./components/Team/Team";
+import Body from "./components/Body/Body";
 
 function App() {
 
@@ -56,25 +50,11 @@ function App() {
         <div className="navbar">
           <NavBar />
         </div>
-        <div className="body">
-          <div className="games-display">
-            <LeagueGames games={games} />
-          </div>
-          <div className="teams-display">
-            <LeagueTeams teams={teams} />
-          </div>
-        </div>
+        <Body teams={teams} games={games} />
         <div className="footer">
           <Footer />
         </div>
       </div>
-
-      <Switch>
-        <Route path="/team/:id">
-          <Team />
-        </Route>
-      </Switch>
-
     </div>
   );
 

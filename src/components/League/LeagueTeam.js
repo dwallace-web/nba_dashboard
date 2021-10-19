@@ -6,7 +6,6 @@ import {
     Route,
     Link,
 } from 'react-router-dom'
-// import Team from '../Team/Team';
 
 const LeagueTeam = ({ team }) => {
     return (
