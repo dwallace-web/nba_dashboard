@@ -11,9 +11,9 @@ import {
 const Body = props => {
     return (
         <div className="body">
-            {/* <div className="games-display">
+            <div className="games-display">
                 <LeagueGames games={props.games} />
-            </div> */}
+            </div>
             <Switch>
                 <Route path="/team/:id">
                     <div className="teams-display">

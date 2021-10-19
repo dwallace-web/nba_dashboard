@@ -17,7 +17,7 @@ const Roster = props => {
     const fetchRoster = async () => {
         const res = await fetch(`http://lakers-backend.herokuapp.com/lookupplayers/${props.teamID}`)
         const data = await res.json()
-        console.log(data)
+        // console.log(data)
         return data.player
     }
 

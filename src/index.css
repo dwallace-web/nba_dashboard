@@ -101,3 +101,9 @@
   text-align: center;
   background-color: whitesmoke;
 }
+
+.player-pic{
+  max-width: 40%;
+  margin: 3%;
+  padding: 0px;
+}
