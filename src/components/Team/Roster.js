@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import PlayerCard from './PlayerCard'
 
 const Roster = props => {
 
@@ -21,8 +22,12 @@ const Roster = props => {
     }
 
     return (
-        <div>
-            <h4>Roster</h4>
+        <div className="roster-display">
+            {
+                roster.map((player) =>
+                    <PlayerCard player={player} key={player.idPlayer} />
+                )
+            }
         </div>
     )
 }
