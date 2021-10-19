@@ -2,8 +2,8 @@ import React from 'react'
 import Roster from './Roster';
 import Games from './Games';
 // import Equipment from './Equipment';
-// import PreviousSchedule from './PreviousSchedule';
 import { useParams } from 'react-router-dom';
+import PastGames from './PastGames';
 
 const Team = (props) => {
     let { id } = useParams();
@@ -13,9 +13,10 @@ const Team = (props) => {
             <div className="teams-display">
                 <Roster teamID={id} />
                 <Games teamID={id} />
+                <PastGames teamID={id} />
             </div>
+
             {/* <Equipment teamID={id} /> */}
-            {/* <PreviousSchedule teamID={id} /> */}
         </div>
     )
 }
