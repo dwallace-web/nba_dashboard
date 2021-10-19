@@ -2,8 +2,6 @@ import React from 'react'
 import { SiFacebook, SiTwitter, SiInstagram, SiYoutube, SiSafari } from "react-icons/si";
 import { IconContext } from 'react-icons/lib';
 import {
-    Switch,
-    Route,
     Link,
 } from 'react-router-dom'
 

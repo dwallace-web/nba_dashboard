@@ -11,10 +11,10 @@ const Team = (props) => {
     return (
         <div>
             <h3>ID: {id}</h3>
-            <Games />
-            <Equipment />
-            <PreviousSchedule />
-            <Roster />
+            <Roster teamID={id} />
+            <Games teamID={id} />
+            <Equipment teamID={id} />
+            <PreviousSchedule teamID={id} />
         </div>
     )
 }

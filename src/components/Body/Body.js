@@ -23,7 +23,7 @@ const Body = props => {
                 </Route>
                 <Route path="/">
                     <div className="teams-display">
-                        <LeagueTeams teams={props.teams} />
+                        {/* <LeagueTeams teams={props.teams} /> */}
                     </div>
                 </Route>
             </Switch>
