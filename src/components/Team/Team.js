@@ -22,7 +22,9 @@ const Team = (props) => {
                         <PastGames teamID={id} />
                     </div>
                 </div>
-                <Equipment teamID={id} />
+                <div className="bottom-view">
+                    <Equipment teamID={id} />
+                </div>
             </div>
 
         </div>

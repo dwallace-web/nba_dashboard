@@ -175,3 +175,19 @@
   color: red;
   font-weight: 200;
 }
+
+.bottom-view{
+  display: flex;
+  justify-content: center; 
+  margin: 50px;
+  padding: 50px;
+}
+
+.equipment-cards{
+  display: flex;
+  justify-content: space-between;
+  flex: 20 20 20 20 ;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}

@@ -29,7 +29,7 @@ const Equipment = props => {
 
             {
                 equipment ?
-                    <div>
+                    <div className="equipment-cards">
                         <h4>Equipment History</h4>
                         {
                             equipment.map((gear) =>
