@@ -30,14 +30,17 @@ const Equipment = props => {
             {
                 equipment ?
                     <div>
-                        <h4>Equipment</h4>
+                        <h4>Equipment History</h4>
                         {
                             equipment.map((gear) =>
                                 <EquipmentCard gear={gear} key={gear.idEquipment} />
                             )
                         }
                     </div>
-                    : <h4> No equipment. Move Along!</h4>
+                    :
+                    <div>
+                        <h4> No equipment. Move Along!</h4>
+                    </div>
             }
         </>
     )

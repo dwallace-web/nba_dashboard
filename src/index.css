@@ -13,17 +13,51 @@
   margin: 24px;
   background-color: mintcream;
 }
+.body {
+  padding-top: 5px;
+}
 
 .game-display {
-  display: flex;
-  flex-direction: row;
-  background-color: gray;
-  color: white;
-  font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+    color: white;
+    font-family: sans-serif;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
+
 .game-view {
   display: flex;
   flex-direction: row;
+  padding: 2px;
+  margin: 2px;
+  border: 1px solid gainsboro;
+  border-radius: 2px;
+}
+
+.game-info {
+   color:black;
+  background-color: white;
+}
+.game-info a {
+  text-decoration:none;
+  color:black;
+  background-color: white;
+}
+.game-info:link{
+  color: black;
+}
+.game-info:visited{
+  color: black;
+}
+
+.game-info a:hover {
+  color: red;
+  font-weight: 200;
 }
 
 .team-display {
@@ -83,14 +117,15 @@
 }
 
 .roster-display {
-  display: grid;
-  column-gap: 10px;
-  row-gap: 10px;
-  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  display: flex;
+  flex: 20 20 20 20 ;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  grid-auto-flow: row;
-  justify-content:center;
-  margin-top: 15px;
+  flex-direction: row;
+}
+.roster-display .col {
+  width: 30%;
+  margin: 1%;
 }
 
 .roster-view {
@@ -113,4 +148,30 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.home-button {
+  padding: 5px;
+  margin: 5px;
+  border: 1px black solid;
+  background-color: white;
+  text-align: center;
+  font-family: sans-serif;
+  text-decoration:none;
+}
+
+.home-button a {
+  text-decoration:none;
+  color: black;
+}
+.home-button:link{
+  color: black;
+}
+.home-button:visited{
+  color: black;
+}
+
+.home-button a:hover {
+  color: red;
+  font-weight: 200;
 }
