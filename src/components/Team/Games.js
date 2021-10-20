@@ -6,20 +6,37 @@ const Games = props => {
 
     const [nextGames, setNextGames] = useState([])
 
-    useEffect(() => {
-        const getNextGames = async () => {
-            const remoteNextGames = await fetchNextGames()
-            setNextGames(remoteNextGames)
-        }
-        getNextGames()
-    }, [])
+    // useEffect(() => {
+    //     const getNextGames = async () => {
+    //         const remoteNextGames = await fetchNextGames()
+    //         setNextGames(remoteNextGames)
+    //     }
+    //     getNextGames()
+    // }, [])
 
-    const fetchNextGames = async () => {
-        const res = await fetch(`http://lakers-backend.herokuapp.com/eventsnext/${props.teamID}`)
-        const data = await res.json()
-        // console.log(data)
-        return data.events
-    }
+    // const fetchNextGames = async () => {
+    //     const res = await fetch(`http://lakers-backend.herokuapp.com/eventsnext/${props.teamID}`)
+    //     const data = await res.json()
+    //     // console.log(data)
+    //     return data.events
+    // }
+
+    let teamidentifer = `${props.teamID}`;
+
+    useEffect(() => {
+        const fetchGames = () => {
+            return fetch(`http://lakers-backend.herokuapp.com/eventsnext/${teamidentifer}`)
+                .then(res => (
+                    res.json()))
+                // .then(data => {
+                //     console.log(data)
+                // })
+                .then(games => {
+                    setNextGames(games.events)
+                })
+        }
+        fetchGames();
+    }, [teamidentifer])
 
     return (
         <div>

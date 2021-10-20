@@ -90,6 +90,7 @@
   justify-content: space-evenly;
   grid-auto-flow: row;
   justify-content:center;
+  margin-top: 15px;
 }
 
 .roster-view {
@@ -106,4 +107,10 @@
   max-width: 40%;
   margin: 3%;
   padding: 0px;
+}
+
+.split-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

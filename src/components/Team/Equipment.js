@@ -1,10 +1,13 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import EquipmentCard from './EquipmentCard';
 
 
 const Equipment = props => {
 
-    const [equipment, setEquipment] = useState([])
+    const [equipment, setEquipment] = useState(null)
+
+    let teamidentifier = `${props.teamID}`;
 
     useEffect(() => {
         const getEquipment = async () => {
@@ -12,19 +15,31 @@ const Equipment = props => {
             setEquipment(remoteEquipment)
         }
         getEquipment()
-    }, [])
+    }, [teamidentifier])
 
     const fetchEquipment = async () => {
-        const res = await fetch(`http://lakers-backend.herokuapp.com/lookupequipment/${props.teamID}`)
+        const res = await fetch(`http://lakers-backend.herokuapp.com/lookupequipment/${teamidentifier}`)
         const data = await res.json()
         console.log(data)
         return data.equipment
     }
 
     return (
-        <div>
-            <h4>Equipment</h4>
-        </div>
+        <>
+
+            {
+                equipment ?
+                    <div>
+                        <h4>Equipment</h4>
+                        {
+                            equipment.map((gear) =>
+                                <EquipmentCard gear={gear} key={gear.idEquipment} />
+                            )
+                        }
+                    </div>
+                    : <h4> No equipment. Move Along!</h4>
+            }
+        </>
     )
 }
 

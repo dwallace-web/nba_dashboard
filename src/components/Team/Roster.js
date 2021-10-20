@@ -6,20 +6,34 @@ const Roster = props => {
 
     const [roster, setRoster] = useState([])
 
-    useEffect(() => {
-        const getRoster = async () => {
-            const remoteRoster = await fetchRoster()
-            setRoster(remoteRoster)
-        }
-        getRoster()
-    }, [])
+    // useEffect(() => {
+    //     const getRoster = async () => {
+    //         const remoteRoster = await fetchRoster()
+    //         setRoster(remoteRoster)
+    //     }
+    //     getRoster()
+    // }, [])
 
-    const fetchRoster = async () => {
-        const res = await fetch(`http://lakers-backend.herokuapp.com/lookupplayers/${props.teamID}`)
-        const data = await res.json()
-        // console.log(data)
-        return data.player
-    }
+    // const fetchRoster = async () => {
+    //     const res = await fetch(`http://lakers-backend.herokuapp.com/lookupplayers/${props.teamID}`)
+    //     const data = await res.json()
+    //     // console.log(data)
+    //     return data.player
+    // }
+
+    let teamidentifer = `${props.teamID}`;
+
+    useEffect(() => {
+        const fetchGames = () => {
+            return fetch(`http://lakers-backend.herokuapp.com/lookupplayers/${teamidentifer}`)
+                .then(res => (
+                    res.json()))
+                .then(roster => {
+                    setRoster(roster.player)
+                })
+        }
+        fetchGames();
+    }, [teamidentifer])
 
     return (
         <div className="roster-display">

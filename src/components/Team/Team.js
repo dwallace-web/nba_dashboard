@@ -1,7 +1,7 @@
 import React from 'react'
 import Roster from './Roster';
 import Games from './Games';
-// import Equipment from './Equipment';
+import Equipment from './Equipment';
 import { useParams } from 'react-router-dom';
 import PastGames from './PastGames';
 
@@ -12,11 +12,19 @@ const Team = (props) => {
         <div>
             <div className="teams-display">
                 <Roster teamID={id} />
-                <Games teamID={id} />
-                <PastGames teamID={id} />
+                <div className="split-view">
+                    <div>
+                        <h4>Upcoming Games</h4>
+                        <Games teamID={id} />
+                    </div>
+                    <div>
+                        <h4>Previous Games</h4>
+                        <PastGames teamID={id} />
+                    </div>
+                </div>
+                <Equipment teamID={id} />
             </div>
 
-            {/* <Equipment teamID={id} /> */}
         </div>
     )
 }

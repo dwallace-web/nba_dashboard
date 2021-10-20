@@ -21,6 +21,20 @@ const PastGames = props => {
         return data.results
     }
 
+    // let teamidentifer = `${props.teamID}`;
+
+    // useEffect(() => {
+    //     const fetchGames = () => {
+    //         return fetch(`http://lakers-backend.herokuapp.com/eventsnext/${teamidentifer}`)
+    //             .then(res => (
+    //                 res.json()))
+    //             .then(games => {
+    //                 setPastGames(games.results)
+    //             })
+    //     }
+    //     fetchGames();
+    // }, [teamidentifer])
+
     return (
         <div>
             {
