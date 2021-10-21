@@ -31,6 +31,7 @@ const Roster = props => {
                 .then(roster => {
                     setRoster(roster.player)
                 })
+                .then(window.scrollTo(0, 0))
         }
         fetchGames();
     }, [teamidentifer])

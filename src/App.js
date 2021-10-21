@@ -47,9 +47,6 @@ function App() {
         <div className="header">
           <Header />
         </div>
-        <div className="navbar">
-          <NavBar />
-        </div>
         <Body teams={teams} games={games} />
         <Footer teams={teams} />
       </div>
