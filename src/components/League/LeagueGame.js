@@ -11,7 +11,7 @@ const LeagueGame = ({ game }) => {
                     {game.strAwayTeam}
                 </Link>
             </p>
-            <p className="game-info"> @ </p>
+            <p className="game-info">&nbsp;@&nbsp;</p>
             <p className="game-info">
                 <Link to={`/team/${game.idHomeTeam}`}>
                     {game.strHomeTeam}

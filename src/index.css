@@ -20,7 +20,7 @@
 .game-display {
     display: flex;
     flex-direction: row;
-    background-color: gray;
+    /* background-color: gray; */
     color: white;
     font-family: sans-serif;
     flex-wrap: wrap;
@@ -74,7 +74,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 4px black solid;
+  border: 1px black solid;
   border-radius: 10px;
   text-align: center;
   background-color: whitesmoke;
@@ -132,7 +132,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 4px black solid;
+  border: 1px black solid;
   border-radius: 10px;
   text-align: center;
   background-color: whitesmoke;
@@ -151,9 +151,8 @@
 }
 
 .home-button {
-  padding: 5px;
-  margin: 5px;
-  border: 1px black solid;
+  padding: 10px;
+  margin: 10px;
   background-color: white;
   text-align: center;
   font-family: sans-serif;
@@ -179,15 +178,57 @@
 .bottom-view{
   display: flex;
   justify-content: center; 
-  margin: 50px;
-  padding: 50px;
 }
 
 .equipment-cards{
   display: flex;
-  justify-content: space-between;
-  flex: 20 20 20 20 ;
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
+}
+
+.equipment-cards .col {
+  width: 15%;
+  margin: 1%;
+}
+
+.equipment-card {
+  border: 1px black solid;
+  background-color: white;
+  border-radius: 10px ;
+  margin: 2%;
+  padding: 2%;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  display: block;
+}
+.gearpic {
+  max-width: 90%;
+  margin: 5%;
+}
+
+.split-view {
+  margin: 20px;
+  padding: 20;
+}
+.game-element {
+  padding: 2px;
+  margin: 5px;
+}
+.next-game-element {
+  display: inline-flex;
+  padding: 2px;
+  margin: 5px;
+}
+.footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  /* border: 1px black solid; */
+}
+.footer-stuff {
+  display: inline-flex;
+  margin: 2px;
+  padding: 2px;
 }

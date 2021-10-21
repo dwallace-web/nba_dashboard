@@ -51,9 +51,7 @@ function App() {
           <NavBar />
         </div>
         <Body teams={teams} games={games} />
-        <div className="footer">
-          <Footer />
-        </div>
+        <Footer teams={teams} />
       </div>
     </div>
   );

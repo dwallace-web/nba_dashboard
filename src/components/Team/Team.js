@@ -14,11 +14,11 @@ const Team = (props) => {
                 <Roster teamID={id} />
                 <div className="split-view">
                     <div>
-                        <h4>Upcoming Games</h4>
+                        <h2>Upcoming Games</h2>
                         <Games teamID={id} />
                     </div>
                     <div>
-                        <h4>Previous Games</h4>
+                        <h2>Previous Games</h2>
                         <PastGames teamID={id} />
                     </div>
                 </div>

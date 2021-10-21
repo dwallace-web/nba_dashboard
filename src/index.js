@@ -4,7 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
+import Moment from 'react-moment';
+import 'moment-timezone';
 // import 'bootstrap/dist/css/bootstrap.min.css';
+
+Moment.globalTimezone = 'America/New_York';
 
 ReactDOM.render(
   <React.StrictMode>
