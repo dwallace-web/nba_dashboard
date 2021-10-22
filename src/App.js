@@ -20,7 +20,7 @@ function App() {
   }, [])
 
   const fetchGames = async () => {
-    const res = await fetch('http://lakers-backend.herokuapp.com/leaguenextevents')
+    const res = await fetch('https://lakers-backend.herokuapp.com/leaguenextevents')
     const data = await res.json()
     // console.log(data)
     return data.events
@@ -36,7 +36,7 @@ function App() {
   }, [])
 
   const fetchTeams = async () => {
-    const res = await fetch('http://lakers-backend.herokuapp.com/leaguedetails')
+    const res = await fetch('https://lakers-backend.herokuapp.com/leaguedetails')
     const data = await res.json()
     // console.log(data)
     return data.teams

@@ -15,7 +15,7 @@ const PastGames = props => {
     }, [])
 
     const fetchPastGames = async () => {
-        const res = await fetch(`http://lakers-backend.herokuapp.com/eventslast/${props.teamID}`)
+        const res = await fetch(`https://lakers-backend.herokuapp.com/eventslast/${props.teamID}`)
         const data = await res.json()
         // console.log(data)
         return data.results

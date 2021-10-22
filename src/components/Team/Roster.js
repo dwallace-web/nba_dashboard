@@ -25,7 +25,7 @@ const Roster = props => {
 
     useEffect(() => {
         const fetchGames = () => {
-            return fetch(`http://lakers-backend.herokuapp.com/lookupplayers/${teamidentifer}`)
+            return fetch(`https://lakers-backend.herokuapp.com/lookupplayers/${teamidentifer}`)
                 .then(res => (
                     res.json()))
                 .then(roster => {
