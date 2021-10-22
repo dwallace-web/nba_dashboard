@@ -5,6 +5,7 @@ const LeagueGames = props => {
 
     return (
         <div className="game-display">
+
             {
                 props.games.map((game) =>
                     <LeagueGame key={game.idEvent} game={game} />

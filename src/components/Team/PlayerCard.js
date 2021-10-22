@@ -5,7 +5,7 @@ const PlayerCard = ({ player }) => {
         <div className="roster-view col">
             <img src={player.strThumb} alt={player.strPlayer} className="player-pic player-element" />
             <h3 className="player-name player-element">{player.strPlayer}</h3>
-            <h4 className="player-info-founded player-element">{player.strPosition} </h4>
+            <p className="player-element">{player.strPosition} </p>
         </div>
 
     )

@@ -4,13 +4,16 @@ import Games from './Games';
 import Equipment from './Equipment';
 import { useParams } from 'react-router-dom';
 import PastGames from './PastGames';
-import { useEffect } from 'react';
 
-const Team = (props) => {
+const Team = props => {
     let { id } = useParams();
+
 
     return (
         <div>
+            {/* <div className="team-header">
+                <img src="" alt="" />
+            </div> */}
             <div className="teams-display">
                 <Roster teamID={id} />
                 <div className="split-view">

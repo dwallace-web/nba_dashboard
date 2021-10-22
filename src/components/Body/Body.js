@@ -12,12 +12,13 @@ const Body = props => {
     return (
         <div className="body">
             <div className="games-display">
+                <h2 className="future-schedule"> Upcoming Schedule </h2>
                 <LeagueGames games={props.games} />
             </div>
             <Switch>
                 <Route path="/team/:id">
                     <div className="teams-display">
-                        <Team />
+                        <Team teams={props.teams} />
                     </div>
                 </Route>
                 <Route path="/">

@@ -9,7 +9,7 @@ const Footer = props => {
         <div className="footer">
             {
                 props.teams.map((team) =>
-                    <p class="footer-stuff" key={team.idTeam}>
+                    <p className="footer-stuff" key={team.idTeam}>
                         <Link to={`/team/${team.idTeam}`}>
                             {team.strTeam}
                         </Link>

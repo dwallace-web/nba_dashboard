@@ -20,7 +20,7 @@ const Equipment = props => {
     const fetchEquipment = async () => {
         const res = await fetch(`http://lakers-backend.herokuapp.com/lookupequipment/${teamidentifier}`)
         const data = await res.json()
-        console.log(data)
+        // console.log(data)
         return data.equipment
     }
 

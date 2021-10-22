@@ -1,11 +1,10 @@
 import React from 'react'
-import { tz } from 'moment-timezone';
 import Moment from 'react-moment';
 
 const TeamGame = props => {
 
     let time = props.game.strTimestamp;
-    console.log(time)
+    // console.log(time)
 
 
     return (

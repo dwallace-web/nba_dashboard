@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import Header from './components/Body/Header';
+
 import Footer from './components/Body/Footer';
-import NavBar from './components/Body/Navbar';
+
 import Body from "./components/Body/Body";
 
 function App() {
