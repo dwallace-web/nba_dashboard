@@ -39,7 +39,7 @@ const Roster = props => {
     return (
         <div className="roster-display">
             {
-                roster.map((player) =>
+                roster?.map((player) =>
                     <PlayerCard player={player} key={player.idPlayer} />
                 )
             }

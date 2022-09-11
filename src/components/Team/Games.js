@@ -41,7 +41,7 @@ const Games = props => {
     return (
         <div>
             {
-                nextGames.map((game) =>
+                nextGames?.map((game) =>
                     <TeamGame game={game} key={game.idEvent} />
                 )
             }

@@ -38,7 +38,7 @@ const PastGames = props => {
     return (
         <div>
             {
-                pastGames.map((game) =>
+                pastGames?.map((game) =>
                     <PastGamesCard game={game} key={game.idEvent} />
                 )
             }

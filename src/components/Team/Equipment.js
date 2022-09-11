@@ -1,49 +1,44 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
-import EquipmentCard from './EquipmentCard';
+import React from "react";
+import { useEffect, useState } from "react";
+import EquipmentCard from "./EquipmentCard";
 
+const Equipment = (props) => {
+  const [equipment, setEquipment] = useState(null);
 
-const Equipment = props => {
+  let teamidentifier = `${props.teamID}`;
 
-    const [equipment, setEquipment] = useState(null)
+  useEffect(() => {
+    const getEquipment = async () => {
+      const remoteEquipment = await fetchEquipment();
+      setEquipment(remoteEquipment);
+    };
+    getEquipment();
+  }, [teamidentifier]);
 
-    let teamidentifier = `${props.teamID}`;
+  const fetchEquipment = async () => {
+    const res = await fetch(
+      `https://lakers-backend.herokuapp.com/lookupequipment/${teamidentifier}`
+    );
+    const data = await res.json();
+    // console.log(data)
+    return data.equipment;
+  };
 
-    useEffect(() => {
-        const getEquipment = async () => {
-            const remoteEquipment = await fetchEquipment()
-            setEquipment(remoteEquipment)
-        }
-        getEquipment()
-    }, [teamidentifier])
+  return (
+    <>
+      {equipment ? (
+        <div className="equipment-cards ">
+          {equipment.map((gear) => (
+            <EquipmentCard gear={gear} key={gear.idEquipment} />
+          ))}
+        </div>
+      ) : (
+        <div className="no_equipment">
+            <p> No equipment images are available for this team.</p>
+        </div>
+      )}
+    </>
+  );
+};
 
-    const fetchEquipment = async () => {
-        const res = await fetch(`https://lakers-backend.herokuapp.com/lookupequipment/${teamidentifier}`)
-        const data = await res.json()
-        // console.log(data)
-        return data.equipment
-    }
-
-    return (
-        <>
-
-            {
-                equipment ?
-                    <div className="equipment-cards ">
-                        {
-                            equipment.map((gear) =>
-                                <EquipmentCard gear={gear} key={gear.idEquipment} />
-                            )
-                        }
-                    </div>
-                    :
-                    <div className="equipment-cards" >
-                        <h4> No equipment is available at this time. Try again later.</h4>
-                    </div>
-            }
-        </>
-    )
-}
-
-
-export default Equipment
+export default Equipment;

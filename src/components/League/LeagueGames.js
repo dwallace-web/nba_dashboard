@@ -7,7 +7,7 @@ const LeagueGames = props => {
         <div className="game-display">
 
             {
-                props.games.map((game) =>
+                props.games?.map((game) =>
                     <LeagueGame key={game.idEvent} game={game} />
                 )
             }

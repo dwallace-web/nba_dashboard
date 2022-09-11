@@ -7,7 +7,7 @@ const LeagueTeams = props => {
     return (
         <div className="team-display">
             {
-                props.teams.map((team) =>
+                props.teams?.map((team) =>
                     <LeagueTeam team={team} key={team.idTeam} />
                 )
             }
