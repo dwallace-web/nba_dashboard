@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/nba-dashboard/static/css/main.e642566f.chunk.css",
+    "main.js": "/nba-dashboard/static/js/main.8cb67e77.chunk.js",
+    "main.js.map": "/nba-dashboard/static/js/main.8cb67e77.chunk.js.map",
+    "runtime-main.js": "/nba-dashboard/static/js/runtime-main.4fbe7480.js",
+    "runtime-main.js.map": "/nba-dashboard/static/js/runtime-main.4fbe7480.js.map",
+    "static/js/2.635dcd92.chunk.js": "/nba-dashboard/static/js/2.635dcd92.chunk.js",
+    "static/js/2.635dcd92.chunk.js.map": "/nba-dashboard/static/js/2.635dcd92.chunk.js.map",
+    "static/js/3.7051c1bd.chunk.js": "/nba-dashboard/static/js/3.7051c1bd.chunk.js",
+    "static/js/3.7051c1bd.chunk.js.map": "/nba-dashboard/static/js/3.7051c1bd.chunk.js.map",
+    "index.html": "/nba-dashboard/index.html",
+    "static/css/main.e642566f.chunk.css.map": "/nba-dashboard/static/css/main.e642566f.chunk.css.map",
+    "static/js/2.635dcd92.chunk.js.LICENSE.txt": "/nba-dashboard/static/js/2.635dcd92.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4fbe7480.js",
+    "static/js/2.635dcd92.chunk.js",
+    "static/css/main.e642566f.chunk.css",
+    "static/js/main.8cb67e77.chunk.js"
+  ]
+}
