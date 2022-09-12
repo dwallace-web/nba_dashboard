@@ -1,6 +1,6 @@
 {
+  "homepage": "https://dwallace-web.github.io/nba_dashboard/",
   "name": "nba-dashboard",
-  "homepage": "https://dwallace-web.github.io/nba-dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
